@@ -351,7 +351,7 @@ class SpeedTestClient:
             print(f"\033[91mError during cleanup: {e}\033[0m")
 
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     # Create an instance of the client and start it
     client = SpeedTestClient()
     client.start()
