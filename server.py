@@ -218,7 +218,7 @@ class SpeedTestServer:
         except Exception as e:
             print(f"\033[91mError during cleanup: {e}\033[0m")
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     server = SpeedTestServer()  # Create an instance of the server
     try:
         server.start()  # Start the server
