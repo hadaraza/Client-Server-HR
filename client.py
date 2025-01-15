@@ -164,7 +164,7 @@ class SpeedTestClient:
         try:
             # Create a TCP socket and connect to the server
             tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            tcp_socket.settimeout(5.0)
+            tcp_socket.settimeout(10.0)
             tcp_socket.connect((server_host, server_port))
 
             # Send the file size to the server
@@ -217,6 +217,7 @@ class SpeedTestClient:
             # Create a UDP socket
             udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             udp_socket.settimeout(5.0)
+
 
             # Send a request to the server with the file size
             request = struct.pack('!IbQ', self.magic_cookie, 0x3, self.file_size)
