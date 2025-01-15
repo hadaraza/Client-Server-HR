@@ -194,9 +194,9 @@ class SpeedTestClient:
             if transfer_time > 0:
                 speed = (self.file_size * 8) / transfer_time
                 self.statistics['tcp_times'].append(transfer_time)
-                print(f"\033[92mTCP transfer #{transfer_num} finished, total time: {transfer_time:.3f} seconds, total speed: {speed:.2f} bits/second\033[0m")
+                print(f"\033[92m\nTCP transfer #{transfer_num} finished, total time: {transfer_time:.3f} seconds, total speed: {speed:.2f} bits/second\033[0m")
             else:
-                print(f"\033[91mTCP transfer #{transfer_num} finished almost instantly; skipping speed calculation.\033[0m")
+                print(f"\033[91m\nTCP transfer #{transfer_num} finished almost instantly; skipping speed calculation.\033[0m")
 
         except Exception as e:
             print(f"\033[91mError in TCP test: {e}\033[0m")
