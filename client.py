@@ -48,7 +48,7 @@ class SpeedTestClient:
                       self._signal_handler)  # Handle Ctrl+C
         signal.signal(signal.SIGTERM, self._signal_handler)  # Handle termination signal
 
-    def _signal_handler(self, signum, frame):
+    def _signal_handler(self, signum, frame) :
         """
         Handle system signals for graceful shutdown.
         Args:
